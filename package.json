@@ -5,15 +5,19 @@
   "author": "Lucas Marchiori",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx --watch src/server.ts"
+    "dev": "tsx --watch src/server.ts",
+    "test": "jest --passWithNoTests --noStackTrace --runInBand"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
     "fastify": "^4.18.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.2",
     "@types/node": "^20.3.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
