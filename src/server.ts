@@ -1,3 +1,3 @@
 import buildApp from "./config/app";
 
-buildApp({ logger: true }, 3000);
+buildApp({ logger: true }, 5001);
