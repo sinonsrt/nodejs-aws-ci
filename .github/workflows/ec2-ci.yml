@@ -40,4 +40,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: cd ~/nodejs-aws-ci && node --version
+          script: export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && cd ~/nodejs-aws-ci && npm install --omit=dev && pm2 restart nodeapp
