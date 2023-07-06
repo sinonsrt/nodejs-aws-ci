@@ -5,6 +5,7 @@
   "author": "Lucas Marchiori",
   "license": "MIT",
   "scripts": {
+    "build": "tsc --build",
     "dev": "tsx --watch src/server.ts",
     "test": "jest --passWithNoTests --noStackTrace --runInBand"
   },
