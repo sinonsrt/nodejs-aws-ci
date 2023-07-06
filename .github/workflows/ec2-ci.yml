@@ -23,7 +23,7 @@ jobs:
       - name: Compiling typescript
         run: npm run build
         
-      - name: copy file via ssh password
+      - name: Updating files
         uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -32,3 +32,15 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "dist, package.json, tsconfig.json"
           target: nodejs-aws-ci
+              
+      - name: Updating API dependencies
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }}
+          script: | 
+            cd ~/nodejs-aws-ci
+            npm i --omit=dev
+            pm2 restart nodeapp
