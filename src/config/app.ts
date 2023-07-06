@@ -11,7 +11,7 @@ const startServer = async (options = {}, port: number) => {
       console.log(error);
     }
 
-    console.log(`Server is up at ${address} 🚀`);
+    console.log(`Server is up on ${address} 🚀`);
   });
 };
 
