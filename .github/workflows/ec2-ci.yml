@@ -41,6 +41,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: | 
-            cd ~/nodejs-aws-ci
+            cd nodejs-aws-ci
             npm i --omit=dev
             pm2 restart nodeapp
