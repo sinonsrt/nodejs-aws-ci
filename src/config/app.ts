@@ -6,7 +6,7 @@ const startServer = async (options = {}, port: number) => {
 
   setupRoutes(app);
 
-  app.listen({ port, host: "0,0,0,0" }, (error, address) => {
+  app.listen({ port, host: "0.0.0.0" }, (error, address) => {
     if (error) {
       console.log(error);
     }
