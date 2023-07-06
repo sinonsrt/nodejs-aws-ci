@@ -31,4 +31,4 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           source: "dist, package.json, tsconfig.json"
-          target: test
+          target: nodejs-aws-ci
