@@ -34,7 +34,7 @@ jobs:
           target: nodejs-aws-ci
               
       - name: Updating API dependencies
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
@@ -42,5 +42,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: | 
             cd ~/nodejs-aws-ci
-            npm i --omit=dev
+            npm install --omit=dev
             pm2 restart nodeapp
