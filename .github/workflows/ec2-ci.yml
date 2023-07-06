@@ -40,4 +40,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          script: cd ~/nodejs-aws-ci && npm install
+          script: cd ~/nodejs-aws-ci && sudo apt-get install nodejs && npm install
